@@ -1,4 +1,5 @@
 PROGRAM CN
+
 integer, parameter :: n=20, E=1, Re=5000, t=360 ! the number of time steps
 integer N1,T1, i, j
 real dy, dt
