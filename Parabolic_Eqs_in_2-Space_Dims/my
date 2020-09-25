@@ -7,7 +7,9 @@
 %@chapter 3, 3.7 Parabolic Emuluations in Two-Space Dimension--------------%
 %------------------------------------------------------------------------%
 
+
 clc; clear all;
+
 
 %% Initial Conditions
 b = 3.5;        % the length of cross-sectional dimensions [ft] -> X-direction
