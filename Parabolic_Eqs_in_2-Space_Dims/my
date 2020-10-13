@@ -32,8 +32,11 @@ t = 1;
 dt = 0.01;
 timenum = t/dt;
 
+
 d1 = (0.5*alpha*dt)/(dx^2);
 d2 = (0.5*alpha*dt)/(dy^2);
+
+
 
 %% Calculation
 T = zeros(m, n);
