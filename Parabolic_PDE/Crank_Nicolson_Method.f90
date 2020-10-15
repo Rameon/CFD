@@ -1,5 +1,6 @@
 PROGRAM CN
 
+
 integer, parameter :: n=20, E=1, Re=5000, t=360 ! the number of time steps
 integer N1,T1, i, j
 real dy, dt
@@ -9,16 +10,21 @@ real,dimension(n-1,t+1) :: K
 real,dimension(n-1) :: x
 real,dimension(1:7,1:n+1) :: uu
 
+
 N1=n+1
 T1=t+1
 dy=1/n
 dt=E*Re*(dy**2)
+
+
 
 ! Initial Condition
 do i=1,n
 	u(i,1)=0
 enddo
 u(N1,1)=1
+
+
 
 ! Coefficients
 do i=1,n-1
@@ -62,6 +68,9 @@ enddo
 OPEN (20, FILE="u.txt")
 write (20,'(21f10.4)', ADVANCE='NO') u
 
+
+
+
 contains
 subroutine thomas(a,b,c,r,x,n)
 implicit none
@@ -72,6 +81,7 @@ implicit none
 !    r - right part
 !    x - the answer
 !    n - number of equations
+
 
 integer,intent(in) :: n
 real,dimension(n),intent(in) :: a,b,c,r
